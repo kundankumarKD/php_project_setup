@@ -25,8 +25,8 @@ class ProductController extends BaseController {
                     'name' => $name,
                     'description' => $description,
                     'price' => $price,
-                    'created_at' => $created_at,
-                    'updated_at' => $updated_at
+                    'createdAt' => $createdAt,
+                    'updatedAt' => $updatedAt
                 );
                 array_push($products_arr['data'], $product_item);
             }
@@ -54,8 +54,8 @@ class ProductController extends BaseController {
                 'name' => $name,
                 'description' => $description,
                 'price' => $price,
-                'created_at' => $created_at,
-                'updated_at' => $updated_at
+                'createdAt' => $createdAt,
+                'updatedAt' => $updatedAt
             );
 
             $response['status_code_header'] = 'HTTP/1.1 200 OK';

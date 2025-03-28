@@ -32,7 +32,7 @@ if ($uriSegments[2] === 'products') {
     require_once __DIR__.'/controllers/ProductController.php';
     
     // Get product ID if exists
-    $productId = isset($uriSegments[2]) ? (int)$uriSegments[2] : null;
+    $productId = isset($uriSegments[3]) ? (int)$uriSegments[3] : null;
     
     // Initialize and process request
     $controller = new ProductController($db, $requestMethod, $productId);

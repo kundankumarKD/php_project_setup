@@ -10,11 +10,12 @@ class Database {
         $this->conn = null;
 
         try {
-            $this->conn = new PDO(
-                "mysql:host=" . $this->host . ";dbname=" . $this->db_name, 
-                $this->username, 
-                $this->password
-            );
+            $dsn = "mysql:host=" . $this->host . ";dbname=" . $this->db_name;
+            $user = $this->username;
+            $password = $this->password;
+
+            $this->conn = new PDO( $dsn, $user, $password );
+            
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $this->conn->exec("set names utf8");
         } catch(PDOException $exception) {

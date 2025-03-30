@@ -10,6 +10,8 @@ class Database {
         $this->conn = null;
 
         try {
+            // $dsn = "mysql:host=localhost;dbname=php_crud_api";
+            
             $dsn = "mysql:host=" . $this->host . ";dbname=" . $this->db_name;
             $user = $this->username;
             $password = $this->password;
